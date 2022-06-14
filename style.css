@@ -5,7 +5,7 @@
 }
 
 body {
-    background-color: hsl(273, 75%, 66%);
+    background-image: linear-gradient(hsl(273, 75%, 66%), hsl(240, 73%, 65%));
     height: 100vh;
     width: 100%;
     font-family: 'Kumbh Sans', sans-serif;
@@ -18,8 +18,8 @@ body {
 }
 
 #container {
-    /* width: 375px; */
-    max-width: 375px;
+    width: 375px;
+    /* max-width: 375px; */
 }
 
 #main {
@@ -40,6 +40,10 @@ body {
     /* background-image: url('images/illustration-woman-online-mobile.svg'); */
     display: grid;
     justify-content: center;
+}
+
+#img2 {
+    display: none;
 }
 
 #shadow {
@@ -95,9 +99,63 @@ input:checked + label + .content {
     display: block;
 }
 
-
-@media (min-width: 580px){
+@media (min-width: 1440px){
     #container {
+        display: grid;
+        grid-template-columns: 10em auto;
+        width: 70vw;
+    }
+
+    #img {
+        display: none;
+    }
+    
+    #img2 {
+        display: grid;
+        z-index: 1;
+    }
+
+    #box {
+        margin-left: -7.5em;
+        z-index: 5;
+        margin-top: 25em;
+    }
+
+    #woman {
+        margin-top: -26.5em;
+        z-index: 1;
+        margin-left: -6em;
+    }
+
+    #pattern {
+        margin-top: -62em;
+        margin-left: -45em;
+    }
+
+    #main {
+        /* margin: 0; */
+        margin-top: 6em;
+        padding: 0%;
+        padding-right: 6em;
+        height: 80vh;
+        width: 70vw;
         display: flex;
+        align-items: center;
+        justify-content: right;
+        position: fixed;
+    }
+
+    #main_div {
+        width: 50%;
+        text-align: left;
+    }
+
+    #main h1 {
+        text-align: left;
+    }
+
+    .attribution {
+        position: fixed;
+        margin-bottom: 0px;
     }
 }
